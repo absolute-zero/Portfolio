@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url("./webfonts/ProximaNova.woff2")format('woff2');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header.flex {
+    justify-content: space-between;
+    height: 110px;
+    align-content: center;
+}
+
+.logo {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #3c3d42;
+    position: relative;
+    top: -2px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.menu {
+    list-style-type: none;
+    align-self: center;
+}
+
+.menu__items {
+}
+
+.menu__link {
+    color: #878c8c;
+    padding: 30px 0 30px 30px;
+    transition: all ease .2s;
+}
+
+.menu__link:hover {
+    color: #56575b;
+    transition: all ease .2s;
+}
+
+.phone {
+    font-size: 18px;
+    align-self: center;
+}
+
+.phone__link {
+    color: #3c3d42;
+}
+
+.mail {
+    font-size: 18px;
+    align-self: center;
+    padding-left: 40px;
+}
+
+.mail__link {
+    color: #3c3d42;
+}
+
+.slide-app {
+    position: relative;
+}
+
+.slide-app_bg {
+    background-image: url("./img/skyBg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.slide-app__main-block {
+    max-width: 470px;
+    width: 60%;
+    color: #fff;
+    margin: 180px 0 260px 0;
+}
+
+.slide-app__main-block h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.slide-app__main-block h1 span {
+    font-weight: normal;
+}
+
+.slide-app__main-block p {
+    font-weight: normal;
+    font-size: 14px;
+    color: #9dc7d1;
+    margin: 45px 0 50px 0;
+    line-height: 24px;
+}
+
+.button {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 21px;
+    color: #fff;
+    border: 3px solid #94b2b7;
+    border-radius: 40px;
+    padding: 15px 50px;
+    box-sizing: border-box;
+    transition: all ease .3s;
+}
+
+.button:hover {
+    border-color: #fff;
+    transition: all ease .3s;
+}
+
+.slide-app__img {
+    height: 600px;
+    width: 950px;
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1439px){
+    .slide-app__img {
+        height: 500px;
+        width: 750px;
+        left: 250px;
+    }
+
+    .slide-app__main-block {
+        margin: 140px 0 180px 0;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .mail {
+        display: none;
+    }
+
+    .slide-app__main-block {
+        margin: 140px auto 180px auto;
+        width: 100%;
+    }
+
+    .slide-app__img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .phone {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px){
+    header{
+        position: relative;
+    }
+
+    nav.flex {
+        width: 100vw;
+        justify-content: space-between;
+    }
+
+    .mobile-menu {
+        display: block;
+        font-size: 30px;
+    }
+
+    .menu {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        flex-flow: column;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        width: 100%;
+        padding: 0 15px;
+        z-index: 9;
+        transition: all ease .3s;
+    }
+
+    .mobile-menu__icon.active {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-flow: column nowrap;
+        transition: all ease .5s;
+    }
+
+    .menu__items {
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+
+    .menu__link {
+        padding: 0;
+    }
+
+    .slide-app__main-block {
+        margin: 100px auto 100px auto;
+    }
+}
+
+.menu_active {
+    visibility: visible;
+    opacity: 1;
+}
